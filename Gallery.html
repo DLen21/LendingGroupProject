@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/slyle/Normalize.css" rel="stylesheet">
+    <title>Gallery</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: "TT Hoves";
+            src: url("./src/fonts/TTHoves-Light.woff") format('woff');
+        }
+
+        @font-face {
+            font-family: "TT Hoves";
+            src: url("./src/fonts/TTHoves-Bold.woff") format('woff');
+            font-weight: bold;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+        }
+
+        p {
+            margin: 0px 0px;
+        }
+
+        .heading__firstpart {
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 64px;
+            line-height: 64px;
+            color: #BDBDBD;
+        }
+
+        .heading__secondpart {
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 64px;
+            color: #333333;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gallery__item {
+            margin: 10px;
+        }
+
+        .heading,
+        .gallery {
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1 class="heading">
+            <p class="heading__firstpart">ГАЛЕРЕЯ</p>
+            <p class="heading__secondpart">ФОТОГРАФИЙ</p>
+        </h1>
+        <div class="gallery">
+            <img src="./src/img/gallery/Reception.png" alt="reception" class="gallery__item">
+            <img src="./src/img/gallery/Seashore.png" alt="seashore" class="gallery__item">
+            <img src="./src/img/gallery/Glasshouse.png" alt="glasshouse" class="gallery__item">
+            <img src="./src/img/gallery/Lighthouse.png" alt="lighthouse" class="gallery__item">
+            <img src="./src/img/gallery/Building.png" alt="building" class="gallery__item">
+            <img src="./src/img/gallery/Entrance.png" alt="entrance" class="gallery__item">
+            <img src="./src/img/gallery/Street.png" alt="street" class="gallery__item">
+            <img src="./src/img/gallery/Museum.png" alt="museum" class="gallery__item">
+            <img src="./src/img/gallery/Venice.png" alt="venice" class="gallery__item">
+            <img src="./src/img/gallery/Skyscrapers.png" alt="skyscrapers" class="gallery__item">
+        </div>
+    </main>
+</body>
+
+</html>
