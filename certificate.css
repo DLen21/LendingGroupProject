@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "TT Hoves";
+    src: url("./src/fonts/TTHoves-Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: "TT Hoves";
+    src: url("./src/fonts/TTHoves-Bold.woff") format('woff');
+    font-weight: bold;
+}
+
+.wrapper {
+    position: absolute;
+    width: 1440px;
+    height: 102px;
+    margin-left: 0px;
+    margin-top: 0px;
+    color: #FFFFFF;
+
+}
+
+.logo-image {
+    display: block;
+    width: 68.55px;
+    height: 41.53px;
+
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 269px;
+    font-family: "TT Hoves";
+    src: url("./src/fonts/TTHoves-Light.woff") format('woff');
+    font-size: 12px;
+}
+
+.nav>li {
+    margin-left: 60px;
+    margin: right 60px;
+}
+
+.nav>li>a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+}
+
+.heading__firstpart {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: TT Hoves;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 64px;
+    color: #BDBDBD;
+}
+
+.heading__secondpart {
+    font-family: TT Hoves;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    color: #333333;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.footer {
+    position: absolute;
+    width: 1440px;
+    height: 404px;
+    margin-left: 0px;
+    top: 1007px;
+    background-color: #333333;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-family: TT Hoves;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h2>ul>li>a {
+    list-style-type: none;
+
+}
+
+
+hr {
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    border: 1px solid #FFFFFF;
+}
+
+.rights-bottom {
+    font-family: Open Sans;
+    Arial;
+    serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    color: rgba(200, 200, 200, 0.5);
+}
+
+h4 {
+    font-family: "TT Hoves";
+    src: url("./src/fonts/TTHoves-Light.woff") format('woff');
+    font-weight: bold;
+}
+
+h4>ul>li> {
+    font-family: "TT Hoves";
+    src: url("./src/fonts/TTHoves-Light.woff") format('woff');
+    font-weight: medium;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.footer-col>li>a {
+    list-style-type: none;
+    text-decoration: none;
+}
