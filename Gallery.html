@@ -6,21 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/slyle/Normalize.css" rel="stylesheet">
+    <link href="./src/Styles/fonts.css" rel="stylesheet">
     <title>Gallery</title>
     <style>
-        body {
+        * {
             box-sizing: border-box;
-        }
-
-        @font-face {
-            font-family: "TT Hoves";
-            src: url("./src/fonts/TTHoves-Light.woff") format('woff');
-        }
-
-        @font-face {
-            font-family: "TT Hoves";
-            src: url("./src/fonts/TTHoves-Bold.woff") format('woff');
-            font-weight: bold;
         }
 
         .heading {
@@ -63,13 +53,135 @@
             flex-wrap: wrap;
         }
 
-        .gallery__item {
-            margin: 10px;
+        .gallery__wrap {
+            margin: 1% 1% 1% 0%;
+            position: relative;
+        }
+
+        .gallery__description {
+            display: none;
+            position: absolute;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            color: #333333;
+        }
+
+        .gallery__wrap:hover .gallery__image {
+            width: 100%;
+            height: 50%;
+        }
+
+        .gallery__wrap:hover .gallery__description {
+            display: block;
+            bottom: 30%;
+            opacity: 1;
         }
 
         .heading,
-        .gallery {
-            margin-left: 5%;
+        .gallery,
+        .pagination-container {
+            margin-left: 2%;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: left;
+            width: 25%;
+            margin-top: 1%;
+        }
+
+        .pagination {
+            display: flex;
+            width: 60%;
+        }
+
+        .pagination__first-page {
+            display: flex;
+            text-decoration: none;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 24px;
+            color: #333333;
+        }
+
+        .pagination__last-page {
+            display: flex;
+            text-decoration: none;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 24px;
+            color: #BDBDBD;
+        }
+
+        .page-selector {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .page-selector__previous:hover,
+        .page-selector__next:hover {
+            background-color: #F9F9F9;
+            color: black;
+        }
+
+        .page-selector__previous {
+            margin-right: 10%;
+        }
+
+        .page-selector__previous,
+        .page-selector__next {
+            text-decoration: none;
+            display: flex;
+            padding: 8px 16px;
+            background: #FFFFFF;
+            border: 1px solid #F2F2F2;
+            color: black;
+        }
+
+        .slash {
+            display: flex;
+            margin: 0% 10%;
+        }
+
+        @media screen and (max-width: 635px) {
+
+            .heading__firstpart,
+            .heading__secondpart {
+                font-size: 60px;
+            }
+
+            .pagination-container {
+                flex-direction: column;
+            }
+
+            .page-selector {
+                justify-content: left;
+            }
+        }
+
+        @media screen and (min-width: 636px) and (max-width: 1000px) {
+            .pagination-container {
+                justify-content: left;
+            }
+
+            .pagination {
+                margin-right: 30%;
+            }
+
+            .pagination__first-page {
+                font-size: 20px;
+            }
+
+            .pagination__last-page {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -82,16 +194,57 @@
             <p class="heading__secondpart">ФОТОГРАФИЙ</p>
         </h1>
         <div class="gallery">
-            <img src="./src/img/gallery/Reception.png" alt="reception" class="gallery__item">
-            <img src="./src/img/gallery/Seashore.png" alt="seashore" class="gallery__item">
-            <img src="./src/img/gallery/Glasshouse.png" alt="glasshouse" class="gallery__item">
-            <img src="./src/img/gallery/Lighthouse.png" alt="lighthouse" class="gallery__item">
-            <img src="./src/img/gallery/Building.png" alt="building" class="gallery__item">
-            <img src="./src/img/gallery/Entrance.png" alt="entrance" class="gallery__item">
-            <img src="./src/img/gallery/Street.png" alt="street" class="gallery__item">
-            <img src="./src/img/gallery/Museum.png" alt="museum" class="gallery__item">
-            <img src="./src/img/gallery/Venice.png" alt="venice" class="gallery__item">
-            <img src="./src/img/gallery/Skyscrapers.png" alt="skyscrapers" class="gallery__item">
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Reception.png" alt="reception" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Seashore.png" alt="seashore" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Glasshouse.png" alt="glasshouse" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Lighthouse.png" alt="lighthouse" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Building.png" alt="building" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Entrance.png" alt="entrance" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Street.png" alt="street" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Museum.png" alt="museum" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Venice.png" alt="venice" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+            <div class="gallery__wrap">
+                <img src="./src/img/gallery/Skyscrapers.png" alt="skyscrapers" class="gallery__image">
+                <div class="gallery__description">Описание или пояснение к изображению.</div>
+            </div>
+        </div>
+        <div class="pagination-container">
+            <div class="pagination">
+                <a href="#" class="pagination__first-page">01</a>
+                <div class="slash"><img src="./src/img/gallery/icons/Slash.svg" class="slash__image"> </div>
+                <a href="#" class="pagination__last-page">05</a>
+            </div>
+            <div class="page-selector">
+                <a href="#" class="page-selector__previous">&#8592;</a>
+                <a href="#" class="page-selector__next">&#8594;</a>
+            </div>
         </div>
     </main>
 </body>
