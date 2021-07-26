@@ -14,7 +14,12 @@
             box-sizing: border-box;
         }
 
-        .container1 {
+        .first-section-container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .first-section-container__container1 {
             display: flex;
             flex-direction: column;
         }
@@ -24,6 +29,7 @@
             flex-direction: column;
             align-items: flex-start;
             padding: 0px;
+            margin-top: 336px;
             margin-bottom: 90px;
         }
 
@@ -101,28 +107,67 @@
             display: flex;
             margin: 0% 10%;
         }
+
+        .first-section-container__container2 {
+            position: relative;
+        }
+
+        .first-section-container__image {
+            width: 100%;
+        }
+
+        .button1 {
+            position: relative;
+            bottom: 6%;
+            border: none;
+            height: 6%;
+            padding: 24px 50px;
+            text-align: center;
+            text-decoration: none;
+            font-family: TT Hoves;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: white;
+            color: #333333
+        }
+
+        .button1:hover {
+            background-color: #F9F9F9;
+            color: #333333;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <div class="container1">
-            <h1 class="heading">
-                <p class="heading__firstpart">PROJECT</p>
-                <p class="heading__secondpart">NURTOWN</p>
-            </h1>
-            <div class="page-selector">
-                <a href="#" class="page-selector__previous">&#8592;</a>
-                <a href="#" class="page-selector__next">&#8594;</a>
+        <section class="first-section-container">
+            <div class="first-section-container__container1">
+                <h1 class="heading">
+                    <p class="heading__firstpart">PROJECT</p>
+                    <p class="heading__secondpart">NURTOWN</p>
+                </h1>
+                <div class="page-selector">
+                    <a href="#" class="page-selector__previous">&#8592;</a>
+                    <a href="#" class="page-selector__next">&#8594;</a>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="pagination__first-page">01</a>
+                    <div class="slash"><img src="./img/gallery/icons/Slash.svg" class="slash__image"> </div>
+                    <a href="#" class="pagination__last-page">02</a>
+                </div>
             </div>
-            <div class="pagination">
-                <a href="#" class="pagination__first-page">01</a>
-                <div class="slash"><img src="./img/gallery/icons/Slash.svg" class="slash__image"> </div>
-                <a href="#" class="pagination__last-page">02</a>
+            <div class="first-section-container__container2">
+                <img src="./img/main/sections/promo/White-building.jpg" alt="white-building"
+                    class="first-section-container__image">
+                <button type="button" class="button1">ВЗГЛЯНУТЬ &#8594;</button>
             </div>
-        </div>
+        </section>
     </main>
-
 </body>
 
 </html>
